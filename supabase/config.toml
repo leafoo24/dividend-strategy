@@ -1,0 +1,14 @@
+# 浏览器从 localhost 调用 functions.invoke 会先发 OPTIONS 预检。
+# 默认 verify_jwt=true 时网关可能对预检返回非 2xx，导致 “blocked by CORS”。
+# 本函数仅用 service_role 访问库 + Secrets 里的 TUSHARE_TOKEN，不依赖用户 JWT。
+[functions.refresh-market-data]
+verify_jwt = false
+
+[functions.refresh-index-daily]
+verify_jwt = false
+
+[functions.refresh-sw-l3-daily]
+verify_jwt = false
+
+[functions.refresh-dividend-stock]
+verify_jwt = false

@@ -1,0 +1,26 @@
+node_modules/
+dist/
+
+.env
+*.local
+
+data/*.db
+data/*.db-*
+dev-server.*.log
+
+.worktrees/
+*.lnk
+
+data/strategy-cache/
+
+# Personal portfolio data and machine-local configuration
+/src/mock/data.js
+/scripts/import-current-holdings.mjs
+/data/*.xlsx
+/data/stock_dividend*.csv
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+.env.*
+!.env.example
